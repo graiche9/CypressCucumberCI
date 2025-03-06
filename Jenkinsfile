@@ -10,7 +10,7 @@ pipeline{
     stages{
         stage("installer les dependences"){
             steps{
-                sh 'nmp ci'
+                sh 'npm ci'
             }
         }
 
