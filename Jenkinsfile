@@ -16,12 +16,12 @@ pipeline{
 
         stage("lancer les tests "){
             steps{
-                sh 'npx cypress run'
+                sh 'npx cypress run --reporter'
             }
         }
 
     }
-    
+
     post {
         always {
         cucumber buildStatus: 'UNSTABLE',
