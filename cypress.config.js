@@ -1,13 +1,16 @@
 const { defineConfig } = require("cypress");
-const cucumber = require("cypress-cucumber-preprocessor").default; 
+const cucumber = require("cypress-cucumber-preprocessor").default; //a ajouter
 
 module.exports = defineConfig({
-  chromeWebSecurity: false,
+  // reporter: "cypress-mochawesome-reporter",
   e2e: {
-    pageLoadTimeout: 120000,
-    specPattern: "cypress/features/**/*.feature", // a ajouter
+
+    chromeWebSecurity: false, // a ajouter
+    specPattern: "cypress/features/*/.feature", 
+
     setupNodeEvents(on, config) {
-      on("file:preprocessor", cucumber()); // ajouter
+      on("file:preprocessor", cucumber());
+      // require("cypress-mochawesome-reporter/plugin")(on);
     },
   },
 });
