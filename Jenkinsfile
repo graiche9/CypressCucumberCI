@@ -1,31 +1,26 @@
-pipeline{
-
+pipeline {
     agent {
         docker {
             image 'cypress/browsers'
-            args '--entrypoint=""'
         }
-    }
-    parameters{
-        choice(name: 'ENV', choices: ['dev', 'staging', 'production'], description: 'Env')
-        choice(name: 'TEST_TYPE', choices: ['smoke', 'regression', 'sanity'], description: 'Type')
-    }
+     }
 
-    stages{
-        stage("installer les dependences"){
-            steps{
+    stages {
+        stage('Install dependencies') {
+            steps {
                 sh 'npm ci'
             }
         }
 
-        stage("lancer les tests "){
-            steps{
-                sh 'npx cypress run --reporter json --reporter-options "output=cypress/results/cucumber.json"'
-            }
+
+        stage('Run Cypress Tests') {
+            steps {
+
+                sh "npx cypress run"
+             }
         }
 
     }
-
     post {
         always {
         cucumber buildStatus: 'UNSTABLE',
@@ -43,6 +38,5 @@ pipeline{
                 trendsLimit: 100
          }
     }
-
-    
+ 
 }
