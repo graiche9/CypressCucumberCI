@@ -16,7 +16,7 @@ pipeline{
 
         stage("lancer les tests "){
             steps{
-                sh 'npx cypress run --reporter'
+                sh 'npx cypress run --reporter json --reporter-options "output=cypress/results/cucumber.json"'
             }
         }
 
