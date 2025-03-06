@@ -1,3 +1,7 @@
+@regression
+@TC-002
+@parcours-01
+@parcours-02
 Feature: Affichage des produits
 
   Scenario: Vérifier l'affichage des produits après connexion

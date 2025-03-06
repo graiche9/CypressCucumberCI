@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="5.665" tests="2" failures="0">
-  <testsuite name="Root Suite" timestamp="2025-03-06T11:03:57" tests="0" file="cypress\features\tri_az_za.feature" time="0.000" failures="0">
+<testsuites name="Mocha Tests" time="5.064" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-03-06T13:38:37" tests="0" file="cypress\features\tri_az_za.feature" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="Tri des produits sur la page des produits" timestamp="2025-03-06T11:03:57" tests="2" time="5.656" failures="0">
-    <testcase name="Tri des produits sur la page des produits Tri Alphabétique A-Z" time="2.086" classname="Tri Alphabétique A-Z">
+  <testsuite name="Tri des produits sur la page des produits" timestamp="2025-03-06T13:38:37" tests="2" time="5.059" failures="0">
+    <testcase name="Tri des produits sur la page des produits Tri Alphabétique A-Z" time="1.920" classname="Tri Alphabétique A-Z">
     </testcase>
-    <testcase name="Tri des produits sur la page des produits Tri Alphabétique Z-A" time="1.257" classname="Tri Alphabétique Z-A">
+    <testcase name="Tri des produits sur la page des produits Tri Alphabétique Z-A" time="1.168" classname="Tri Alphabétique Z-A">
     </testcase>
   </testsuite>
 </testsuites>

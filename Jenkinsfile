@@ -6,6 +6,10 @@ pipeline{
             args '--entrypoint=""'
         }
     }
+    parameters{
+        choice(name: 'ENV', choices: ['dev', 'staging', 'production'], description: 'Env')
+        choice(name: 'TEST_TYPE', choices: ['smoke', 'regression', 'sanity'], description: 'Type')
+    }
 
     stages{
         stage("installer les dependences"){
