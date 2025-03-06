@@ -19,5 +19,14 @@ pipeline{
                 sh 'npx '
             }
         }
+
+
+    }
+
+    post{
+
+        always {
+            junit 'results/**/*.xml'
+        }
     }
 }
